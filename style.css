@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center;  color: #ffffff;}
+.attribution a {  color: #ffffff; font-weight: 700; }
 
 :root{
     --dark-cyan: hsl(185, 75%, 39%);
@@ -13,9 +13,9 @@
 
 
 html, body{
+    margin: 0;
     font-size: 18px;
     font-family: 'Kumbh Sans', sans-serif;
-    background-image: url(images/bg-pattern-bottom.svg) ;
     height:100%;
     width: 100%;
     display: flex;
@@ -25,23 +25,87 @@ html, body{
 }
 
 
+html, body{
+     background-color: var(--dark-cyan);
+     background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+     background-repeat: no-repeat;
+}
+
+@media only screen and  (max-width: 375px) {
+    html,body{
+        background-position: top -47vh left -43vw, bottom -21vh right -44vw !important;
+        background-size: 100vw !important;
+    }
+}
+
+
+@media only screen and  (max-width: 1440px) {
+    html,body{
+        background-position: top -31em left -10.2em, bottom -34.5em right -8.7em ;
+        background-size: 50em;
+
+    }
+}
+
 .card{
-    /* width: 30%; */
     background-color: #ffffff;
     border-radius: 15px 15px;
-    /* border: 2px; */
     box-shadow: 0px 0px 23px 0px rgb(143, 143, 143);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
     overflow: hidden;
+    width: 330px;
+
 }
+
+
+
+.background__card{
+    background-image: url('images/bg-pattern-card.svg');
+    height: 80px;
+
+}
+
+.avatar{
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+}
+
+.info__user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.info__user > span:first-child {
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+
+}
+
+.info__user > span > span {
+    font-weight: 400;
+    color: var(--dark-gray);
+
+}
+
+.info__user > span:nth-child(2) {
+    color: var(--dark-gray);
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px 0px 20px 0px;
+}
+
 
 .container__counters{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    border-top: 1px solid #EBEBEB;
+    padding: 20px 0px;
 }
 
 .container__counters > div  {
@@ -52,25 +116,13 @@ html, body{
 }
 
 .container__counters > div >span:nth-child(1)  {
+    color: var(--very-dark-desaturated-blue);
     font-weight: 700;
 }
 
 .container__counters > div >span:nth-child(2)  {
-    color: #919193;
+    color: var(--dark-gray);
     font-weight: 400;
     font-size: 14px;
 
-}
-
-.background_pattern_card{
-    background-image: url('images/bg-pattern-card.svg');
-    height: 80px;
-
-}
-
-
-
-.avatar{
-    border-radius: 100%;
-    border: 5px solid #ffffff;
 }
